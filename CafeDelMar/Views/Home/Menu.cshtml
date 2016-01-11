@@ -1,0 +1,167 @@
+﻿@model IEnumerable<CafeDelMar.Models.FoodItems>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+
+    <link href="~/StyleSheets/MenuCss.css" rel="stylesheet" />
+    <title>Menu</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse  navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Cafe Del Mar</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/Home/Menu">Home</a></li>
+                    <li><a href="/Home/Menu">Menu</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="/Home/GetAllOrders">Info</a></li>
+                    <li><a href="/Home/Feedback">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 ">
+                    <h1>Cafe Del Mar</h1>
+                    <p style="padding:40px;"></p>
+                    <p>
+                        We take inspiration from the world's best
+                        cuisines, and create a unique fusion experience.Our lipsmacking
+                        creations will tickle your culinary senses!
+                    </p>
+                    <div class="col-xs-12 col-sm-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="cart">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p style="padding:20px;"></p>
+                    <h3 align=center>Our Mouthwatering Creations</h3>
+                    <p style="padding:40px;"></p>
+                </div>
+                <div class="col-xs-12 col-sm-4" style="float:right">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 align=center>Use Cupon Code</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="dl-horizontal">
+                                <dt>Code :</dt>
+                                <dd><strong class="primary">CDM001</strong></dd>
+                                <dt>Discount</dt>
+                                <dd>upto 40%</dd>
+                                <dt>Delivery</dt>
+                                <dd>Free on your First Order</dd>
+                                <dt>Min. Order Amount :</dt>
+                                <dd>&#8377;200</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="media col-sm-8">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="row">
+                            <div class="media-left media-middle ">
+                                <img src=@Url.Content("~/Images/"+item.ID+".jpg") class="media-object image-thumbnail" width="100" height="100" />
+                            </div>
+                            <div class="media-body ">
+                                <h2 class="media-heading">@item.Name</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div><label class="label-success btn-sm">Price : &#8377;@item.Price</label>&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger btn-sm" value="ADD">ADD</button></div>
+                                
+                            </div>
+                        </div>
+                        <br />
+                    }
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <p style="padding:20px;"></p>
+                    <h3 align=center>Meet Our Culinary Specialist</h3>
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                    <h2>S. Cook</h2>
+                    <h4>Excutive Chef</h4>
+                    <p>
+                        Award winning Chef with wide international experience having worked in many TV shows,
+                        he is specialized in all type of mouthwatering food.
+                    </p>
+                    <a href="#">More &raquo;</a>
+                    <p style="padding:50px;"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class=" row">
+                <div class="col-xs-11 col=xs-offset-1 col-sm-8 col-sm-offset-1">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled">
+                        <li>@Html.ActionLink("Home", "Home")</li>
+                        <li>@Html.ActionLink("About", "Home")</li>
+                        <li>@Html.ActionLink("Menu", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Home")</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <h5>Our Address</h5>
+                    <address>
+                        Sony World,Koramangala<br />
+                        Karnataka, India<br />
+                        Tel : +222 2222 2222<br />
+                        Fax : +444 4444 4444<br />
+                        Email :<a href="#">cafedelmar@@mail.com</a><br />
+                    </address>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <p style="padding:20px;"></p>
+                <p align=center>@@ Copyright 2016 Cafe Del Mar</p>
+            </div>
+        </div>
+    </footer>
+    @*<script src="~/Scripts/JavaScript1.js"></script>*@
+    <script src="~/Scripts/JavaScript1.js"></script>
+</body>
+</html>

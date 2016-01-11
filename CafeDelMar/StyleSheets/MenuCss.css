@@ -1,0 +1,13 @@
+﻿.jumbotron {
+    /*background:#ff6a00;*/
+    background-image: url("slide1.jpg");
+}
+.footer {
+    background-color:black;
+    color:#808080;
+    font-size:12px;
+}
+.navbar {
+    margin-bottom:0;
+}
+

@@ -1,0 +1,137 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <link href="~/StyleSheets/AboutCSS.css" rel="stylesheet" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-inverse  navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Cafe Del Mar</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/Home/Menu">Home</a></li>
+                        <li><a href="/Home/Menu">Menu</a></li>
+                        <li><a href="/Home/About">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="/Home/GetAllOrders">Info</a></li>
+                        <li><a href="/Home/Feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                   
+                    <img src="~/Images/carousel1.jpg" />
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    
+                    <img src="~/Images/carousel2.jpg" />
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+              
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <p style="padding:10px;"></p>
+    <div class="container">
+        <div class="row row-content">
+            <h2>Description of the Online Resturent Website Project :</h2>
+            <ul class="nav nav-tabs " role="tablist">
+                <li role="presentation" class="active ">
+                    <a href="#features" role="tab" data-toggle="tab">Features</a>
+                </li>
+                <li role="presentation">
+                    <a href="#models" role="tab" data-toggle="tab">Data Models</a>
+                </li>
+                <li role="presentation">
+                    <a href="#controllers" role="tab" data-toggle="tab">Controllers</a>
+                </li>
+                <li role="presentation">
+                    <a href="#views" role="tab" data-toggle="tab">Views</a>
+                </li>
+
+            </ul>
+            @*<ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>*@
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="features">
+                    <h3>FEATURES <small>features goes here...</small></h3>
+                    <p> ... </p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade " id="models">
+                    <h3>MODELS <small>models goes here</small></h3>
+                    <p> ... </p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane " id="controllers">
+                    <h3>CONTROLLERS <small>controllers goes here....</small></h3>
+                    <p> ... </p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade " id="views">
+                    <h3> VIEWS<small>views goes here.....</small></h3>
+                    <p> ... </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</body>
+</html>
